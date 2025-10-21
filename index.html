@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="x-icon" href="nigg.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dona Josefa National Senior High School — Welcome</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green: #1e8f4a;      /* primary green */
+      --green-2: #bfeecb;    /* light green */
+      --bg: #f7fdf6;
+      --muted:#4a4a4a;
+      --radius: 12px;
+      font-size: 16px;
+    }
+    *{box-sizing: border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial; background:var(--bg); color:#0b2a17}
+    a{color:inherit;text-decoration:none}
+
+    /* NAV */
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));position:sticky;top:0;backdrop-filter:saturate(130%) blur(6px);z-index:40;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{width:56px;height:56px;object-fit:contain;border-radius:10px;background:white;padding:6px}
+    .brand h1{font-size:1rem;margin:0}
+    .nav-links{display:flex;gap:14px;align-items:center}
+    .nav-links a{padding:8px 12px;border-radius:10px;font-weight:600;color:var(--muted)}
+    .nav-links a.cta{background:var(--green);color:white}
+
+    .menu-btn{display:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 20px;background:linear-gradient(180deg, var(--green-2), rgba(255,255,255,0));}
+    .hero-inner{display:flex;flex-direction:column;gap:18px;max-width:1200px;margin:0 auto}
+    .hero-card{display:flex;gap:20px;align-items:center}
+    .hero .logo-round{width:120px;height:120px;border-radius:20px;overflow:hidden;flex-shrink:0;box-shadow:0 6px 24px rgba(14,38,21,0.12)}
+    .hero h2{margin:0;font-size:2rem;line-height:1.05;color:var(--green)}
+    .hero p{margin:0;color:var(--muted)}
+    .hero-actions{display:flex;gap:12px}
+    .btn{padding:10px 16px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:var(--green);color:white}
+    .btn-ghost{background:transparent;border:2px solid rgba(0,0,0,0.06)}
+
+    /* LAYOUT */
+    .container{max-width:1100px;margin:0 auto;padding:28px 20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border-radius:var(--radius);padding:16px;box-shadow:0 8px 20px rgba(14,38,21,0.06)}
+    .muted{color:var(--muted)}
+
+    /* PROGRAMS */
+    .programs .prog{display:flex;gap:12px;align-items:flex-start}
+    .prog img{width:56px;height:56px;border-radius:10px;object-fit:cover}
+
+    /* EVENTS */
+    .events-list{display:flex;flex-direction:column;gap:12px}
+    .event{display:flex;justify-content:space-between;gap:12px}
+
+    /* CONTACT */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    form input, form textarea{padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
+    form textarea{grid-column:1/-1;min-height:110px}
+    form .submit{grid-column:1/-1;justify-self:end}
+
+    .socmed-list{display:flex;gap:14px;align-items:center;margin-top:10px;}
+    .socmed-icon{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--green-2);transition:background 0.2s}
+    .socmed-icon:hover{background:var(--green);}
+    .socmed-icon img{width:22px;height:22px;}
+
+    footer{padding:26px 20px;background:#fff;margin-top:26px;border-top:1px solid rgba(0,0,0,0.04)}
+
+    @media (max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}.hero h2{font-size:1.6rem}}
+    @media (max-width:640px){
+      .nav-links{display:none}
+      .menu-btn{display:block}
+      .hero{padding:22px 12px}
+      .grid-3{grid-template-columns:1fr}
+      form{grid-template-columns:1fr}
+      .hero h2{font-size:1.4rem}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav" role="banner">
+    <div class="brand">
+      <img src="school.png" alt="School logo">
+      <div>
+        <h1>Dona Josefa National Senior High School</h1>
+        <div class="muted">Las Piñas City </div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#programs">Programs</a>
+        <a href="#events">News</a>
+        <a href="#admissions">Admissions</a>
+        <a class="cta" href="#contact">Contact</a>
+      </div>
+      <button class="menu-btn btn" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-card">
+        <div class="logo-round"><img src="school.png" alt="School logo" style="width:100%;height:100%;object-fit:cover"></div>
+        <div>
+          <h2>Welcome to Dona Josefa National Senior High School</h2>
+          <p class="muted">Provides quality education and modern facilities to help students prepare for college and future careers.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#admissions">Enroll Now</a>
+            <a class="btn btn-ghost" href="#programs">View Programs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="container" id="about">
+      <div class="grid-3">
+        <div class="card">
+          <h3>About Us</h3>
+          <p class="muted">Dona Josefa National Senior High School provides quality senior high education with inclusive programs for students in Las Piñas City.</p>
+        </div>
+        <div class="card">
+          <h3>Mission</h3>
+          <ul class="muted">
+            <li>Provide learner-centered environment</li>
+            <li>Support 21st-century skills and ICT</li>
+            <li>Encourage community involvement</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Quick Links</h3>
+          <ul class="muted">
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#events">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS SECTION WITH LINKS AND ENGLISH USE/BENEFITS -->
+    <section class="container programs" id="programs">
+      <h2>Senior High Programs</h2>
+      <div style="height:12px"></div>
+      <div class="grid-3">
+        <div class="card prog">
+          <img src="1000_F_362079264_QvnnMGis8oWVj7lQJwjvzw9Ajrd4AnMQ.jpg" alt="STEM">
+          <div>
+            <h4>
+              <a href="https://www.sciencedirect.com/topics/engineering/science-technology-engineering-and-mathematics" target="_blank">STEM</a>
+            </h4>
+            <p class="muted">Science, Technology, Engineering, and Mathematics Track.</p>
+            <p style="font-size:0.96em">
+              <strong>Use and Benefits:</strong> <br>
+              STEM is for students who are passionate about science, technology, and mathematics. It helps students prepare for courses in medicine, engineering, and other technical fields. It is important in daily life as it expands problem-solving skills, creativity, and the ability to find solutions to modern challenges.
+            </p>
+          </div>
+        </div>
+
+        <div class="card prog">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400" alt="HUMSS">
+          <div>
+            <h4>
+              <a href="https://www.studocu.com/ph/document/philippine-normal-university/philippine-literature/humss-strand/28222888" target="_blank">HUMSS</a>
+            </h4>
+            <p class="muted">Humanities and Social Sciences Track.</p>
+            <p style="font-size:0.96em">
+              <strong>Use and Benefits:</strong> <br>
+              HUMSS is for those who enjoy analyzing society, history, and communication. It helps develop empathy, communication skills, and leadership — all important for daily interactions, helping others, and understanding social issues.
+            </p>
+          </div>
+        </div>
+
+        <div class="card prog">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400" alt="ABM">
+          <div>
+            <h4>
+              <a href="https://www.careerexplorer.com/careers/accountant/" target="_blank">ABM</a>
+            </h4>
+            <p class="muted">Accountancy, Business, and Management Track.</p>
+            <p style="font-size:0.96em">
+              <strong>Use and Benefits:</strong> <br>
+              ABM is for those who want to become entrepreneurs, accountants, or managers. It teaches students about proper money management, business, and organization — useful for daily life such as budgeting, starting a business, and leading a group.
+            </p>
+          </div>
+        </div>
+
+        <div class="card prog">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=400" alt="ICT">
+          <div>
+            <h4>
+              <a href="https://www.techtarget.com/searchcio/definition/ICT-information-and-communications-technology-or-technologies" target="_blank">ICT</a>
+            </h4>
+            <p class="muted">Information and Communications Technology Track — for students interested in coding, hardware, and networking.</p>
+            <p style="font-size:0.96em">
+              <strong>Use and Benefits:</strong> <br>
+              ICT helps students learn about technology, computer programming, and troubleshooting gadgets. It is essential nowadays because almost every task is related to technology — from online learning, website creation, and fixing computers at home or in the office.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="events">
+      <h2>News & Events</h2>
+      <div class="events-list">
+        <div class="event card">
+          <div>
+            <strong>Graduation Ceremony — December 18, 2025</strong>
+            <div class="muted">Venue: Dona Josefa Covered Court.</div>
+          </div>
+          <div class="muted">Dec 18, 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="admissions">
+      <h2>Admissions</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h4>How to Apply</h4>
+          <ol class="muted">
+            <li>Prepare Form 138 & PSA Birth Certificate</li>
+            <li>Fill the Online Application</li>
+            <li>Attend orientation</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h4>Requirements</h4>
+          <ul class="muted">
+            <li>Form 138</li>
+            <li>2x2 ID photos</li>
+            <li>Parent/Guardian ID</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Scholarship</h4>
+          <p class="muted">Available for qualified low-income students.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <h2>Contact Us</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h4>School Office</h4>
+          <p class="muted">Dona Josefa National Senior High School, Las Piñas City</p>
+          <p class="muted">Phone: (09) 8xx-xxxx • Email: 340551@deped.gov.ph</p>
+          <div>
+            <h4 style="margin-top:16px;">Social Media</h4>
+            <div class="socmed-list">
+              <a class="socmed-icon" href="https://www.facebook.com/lpshsdjc2020" target="_blank" title="Facebook">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+              </a>
+              <a class="socmed-icon" href="https://instagram.com/" target="_blank" title="Instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+              </a>
+              <a class="socmed-icon" href="https://tiktok.com/" target="_blank" title="TikTok">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
+              </a>
+            </div>
+            <div class="muted" style="font-size:0.92em;margin-top:6px;"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Send a message</h4>
+          <form onsubmit="event.preventDefault(); alert('Demo only — connect to backend later.');">
+            <input aria-label="Your name" type="text" placeholder="Your name" required>
+            <input aria-label="Your email" type="email" placeholder="Your email" required>
+            <textarea aria-label="Message" placeholder="Your message"></textarea>
+            <button class="btn btn-primary submit" type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="card">
+          <h4>Map & Office Hours</h4>
+          <p class="muted">Mon–Fri 8:00 AM – 4:00 PM</p>
+          <div style="height:120px;background:linear-gradient(180deg,rgba(0,0,0,0.04),transparent);display:flex;align-items:center;justify-content:center;border-radius:8px">Map placeholder</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>
+          <strong>Dona Josefa National Senior High School</strong>
+          <div class="muted">Las Piñas City • Philippines</div>
+        </div>
+        <div class="muted">© <span id="year"></span> Student-made template</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.querySelector('.menu-btn');
+    menuBtn?.addEventListener('click', ()=>{
+      const nav = document.querySelector('.nav-links');
+      if(nav.style.display === 'flex'){nav.style.display='none';menuBtn.setAttribute('aria-expanded','false')} else {nav.style.display='flex';menuBtn.setAttribute('aria-expanded','true')}
+    });
+  </script>
+</body>
+</html>
